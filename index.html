@@ -137,15 +137,15 @@
         .film-info .meta { display: block; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-sub); margin-bottom: 25px; border-left: 2px solid var(--text-main); padding-left: 10px; }
         .fallback-link { font-size: 0.8rem; text-decoration: underline; color: var(--text-sub); }
 
-        .helios-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; height: 500px; }
-        .helios-card { position: relative; height: 100%; overflow: hidden; transition: all 0.5s ease; cursor: zoom-in; }
-        .helios-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; filter: grayscale(100%); }
-        .helios-card:hover { flex-grow: 1.5; }
-        .helios-card:hover img { transform: scale(1.1); filter: grayscale(0%); }
-        .helios-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(255,255,255,0.95), transparent); color: #000; opacity: 0; transform: translateY(20px); transition: 0.4s; pointer-events: none; }
-        .helios-card:hover .helios-overlay { opacity: 1; transform: translateY(0); }
-        .helios-overlay h4 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0; }
-        .helios-overlay span { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+        .collage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; height: 500px; }
+        .collage-card { position: relative; height: 100%; overflow: hidden; transition: all 0.5s ease; cursor: zoom-in; }
+        .collage-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; filter: grayscale(100%); }
+        .collage-card:hover { flex-grow: 1.5; }
+        .collage-card:hover img { transform: scale(1.1); filter: grayscale(0%); }
+        .collage-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(255,255,255,0.95), transparent); color: #000; opacity: 0; transform: translateY(20px); transition: 0.4s; pointer-events: none; }
+        .collage-card:hover .collage-overlay { opacity: 1; transform: translateY(0); }
+        .collage-overlay h4 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0; }
+        .collage-overlay span { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
 
         #art { background-color: var(--bg-secondary); }
         .art-gallery { 
@@ -245,9 +245,9 @@
         @media (max-width: 768px) {
             .hero-title { font-size: 12vw; }
             .film-item, .film-item:nth-child(even) { flex-direction: column; text-align: left; }
-            .helios-grid { grid-template-columns: 1fr; height: auto; }
-            .helios-card { height: 300px; margin-bottom: 10px; }
-            .helios-card img { filter: grayscale(0%); }
+            .collage-grid { grid-template-columns: 1fr; height: auto; }
+            .collage-card { height: 300px; margin-bottom: 10px; }
+            .collage-card img { filter: grayscale(0%); }
             .script-content { padding: 20px; }
             .dialogue-block { padding: 0; text-align: left; }
             .script-container { padding-left: 20px; border: none; }
@@ -260,7 +260,7 @@
         <div class="logo">JOYCE ZHANG</div>
         <div class="menu">
             <a href="#films">Films</a>
-            <a href="#helios">Collage</a>
+            <a href="#collage">Collage</a>
             <a href="#art">Fine Arts</a>
             <a href="#writing">Writing</a>
         </div>
@@ -304,37 +304,37 @@
         </div>
     </section>
 
-    <section id="helios">
+    <section id="collage">
         <div class="section-header">
             <h2 class="section-title">Project Collage</h2>
             <p class="section-desc">AP Psychology</p>
         </div>
 
-        <div class="helios-grid">
-            <div class="helios-card">
+        <div class="collage-grid">
+            <div class="collage-card">
                 <img src="image_fbc459.jpg" alt="Silence of the Lambs">
-                <div class="helios-overlay">
+                <div class="collage-overlay">
                     <h4>Silence of the Lambs</h4>
                     <span>Antisocial Personality</span>
                 </div>
             </div>
-            <div class="helios-card">
+            <div class="collage-card">
                 <img src="image_fbc43f.jpg" alt="Black Swan">
-                <div class="helios-overlay">
+                <div class="collage-overlay">
                     <h4>Black Swan</h4>
                     <span>Narcissistic Disorder</span>
                 </div>
             </div>
-            <div class="helios-card">
+            <div class="collage-card">
                 <img src="image_fbc43b.jpg" alt="Taxi Driver">
-                <div class="helios-overlay">
+                <div class="collage-overlay">
                     <h4>Taxi Driver</h4>
                     <span>PTSD</span>
                 </div>
             </div>
-            <div class="helios-card">
+            <div class="collage-card">
                 <img src="image_fbc436.jpg" alt="Perfect Blue">
-                <div class="helios-overlay">
+                <div class="collage-overlay">
                     <h4>Perfect Blue</h4>
                     <span>Schizophrenia</span>
                 </div>
@@ -455,7 +455,7 @@
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         
-        const images = document.querySelectorAll('.helios-card img, .art-piece img');
+        const images = document.querySelectorAll('.collage-card img, .art-piece img');
         
         images.forEach(img => {
             img.addEventListener('click', e => {
