@@ -1,476 +1,686 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOYCE ZHANG | Director Portfolio</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JOYCE ZHANG | Director Portfolio</title>
 
-    <style>
-        :root {
-            --bg-color: #fcfbf9; 
-            --bg-secondary: #f2efe9;
-            --text-main: #2c2c2c;
-            --text-sub: #66605b;
-            --accent: #8a2be2; 
-            
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Lato', sans-serif;
-            --font-script: 'Courier Prime', monospace;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <style>
+    :root {
+      --bg-color: #fcfbf9;
+      --bg-secondary: #f2efe9;
+      --text-main: #2c2c2c;
+      --text-sub: #66605b;
+      --accent: #8a2be2;
+      --font-serif: "Playfair Display", serif;
+      --font-sans: "Lato", sans-serif;
+      --font-script: "Courier Prime", monospace;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-sans);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 9998;
-        }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9998;
+    }
 
-        nav {
-            position: fixed;
-            top: 0; width: 100%;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background: rgba(252, 251, 249, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
+    a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 
-        .logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; }
-        .menu a { margin-left: 25px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-sub); }
-        .menu a:hover { color: var(--text-main); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+    nav {
+      position: fixed;
+      top: 0; width: 100%;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(252, 251, 249, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
 
-        header {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
+    .logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; }
+    .menu a { margin-left: 25px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-sub); }
+    .menu a:hover { color: var(--text-main); border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
 
-        .hero-title {
-            font-family: var(--font-serif);
-            font-size: 6vw;
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-            animation: fadeIn 1.5s ease-out;
-        }
-        
-        .hero-title em { font-style: italic; color: #555; }
-        .hero-subtitle { font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: var(--text-sub); margin-top: 10px; animation: fadeIn 2s ease-out; }
+    header {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
 
-        section { padding: 120px 8%; border-bottom: 1px solid rgba(0,0,0,0.03); }
-        .section-header { margin-bottom: 80px; text-align: center; }
-        .section-title { font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 10px; }
-        .section-desc { color: var(--text-sub); font-style: italic; max-width: 500px; margin: 0 auto; }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 6vw;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+      animation: fadeIn 1.5s ease-out;
+    }
 
-        .film-item { display: flex; align-items: center; gap: 60px; margin-bottom: 120px; }
-        .film-item:nth-child(even) { flex-direction: row-reverse; }
+    .hero-title em { font-style: italic; color: #555; }
+    .hero-subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      margin-top: 10px;
+      animation: fadeIn 2s ease-out;
+    }
 
-        .video-box {
-            flex: 1.5;
-            box-shadow: 20px 20px 0px rgba(0,0,0,0.03);
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            background: #000;
-            overflow: hidden;
-            border-radius: 6px;
-        }
+    section { padding: 120px 8%; border-bottom: 1px solid rgba(0,0,0,0.03); }
+    .section-header { margin-bottom: 80px; text-align: center; }
+    .section-title { font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 10px; }
+    .section-desc { color: var(--text-sub); font-style: italic; max-width: 500px; margin: 0 auto; }
 
-        .video-cover {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .film-item { display: flex; align-items: center; gap: 60px; margin-bottom: 120px; }
+    .film-item:nth-child(even) { flex-direction: row-reverse; }
 
-        .video-play-btn {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.85);
-            font-size: 2.3rem;
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(4px);
-            transition: 0.25s ease;
-        }
+    .video-box {
+      flex: 1.5;
+      box-shadow: 20px 20px 0px rgba(0,0,0,0.03);
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      background: #000;
+      overflow: hidden;
+      border-radius: 6px;
+      isolation: isolate;
+      cursor: pointer;
+    }
 
-        .video-play-btn:hover {
-            background: rgba(255,255,255,1);
-            transform: translate(-50%, -50%) scale(1.05);
-        }
+    .video-cover {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.001);
+      transition: opacity 0.35s ease, filter 0.35s ease;
+      z-index: 1;
+    }
 
-        .film-info { flex: 1; }
-        .film-info h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 15px; }
-        .film-info .meta { display: block; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-sub); margin-bottom: 25px; border-left: 2px solid var(--text-main); padding-left: 10px; }
-        .fallback-link { font-size: 0.8rem; text-decoration: underline; color: var(--text-sub); }
+    .video-box.is-playing .video-cover,
+    .video-box.is-loading .video-cover {
+      filter: blur(1px);
+      opacity: 0.2;
+    }
 
-        .collage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; height: 500px; }
-        .collage-card { position: relative; height: 100%; overflow: hidden; transition: all 0.5s ease; cursor: zoom-in; }
-        .collage-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; filter: grayscale(100%); }
-        .collage-card:hover { flex-grow: 1.5; }
-        .collage-card:hover img { transform: scale(1.1); filter: grayscale(0%); }
-        .collage-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(255,255,255,0.95), transparent); color: #000; opacity: 0; transform: translateY(20px); transition: 0.4s; pointer-events: none; }
-        .collage-card:hover .collage-overlay { opacity: 1; transform: translateY(0); }
-        .collage-overlay h4 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0; }
-        .collage-overlay span { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
+    .yt-player {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      z-index: 2;
+    }
+    .video-box.is-playing .yt-player {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .yt-player iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-        #art { background-color: var(--bg-secondary); }
-        .art-gallery { 
-            column-count: 3; 
-            column-gap: 30px; 
-        }
-        
-        @media (max-width: 1024px) { .art-gallery { column-count: 2; } }
-        @media (max-width: 768px) { .art-gallery { column-count: 1; } }
+    .video-play-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      font-size: 2.3rem;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      transition: 0.25s ease;
+      z-index: 3;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+    }
+    .video-play-btn:hover {
+      background: rgba(255,255,255,1);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+    .video-play-btn:focus-visible {
+      outline: 3px solid rgba(138, 43, 226, 0.35);
+      outline-offset: 4px;
+    }
 
-        .art-piece {
-            margin-bottom: 30px;
-            break-inside: avoid;
-            background: #fff;
-            padding: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            transition: transform 0.3s;
-            cursor: zoom-in;
-        }
+    .video-box.is-playing .video-play-btn,
+    .video-box.is-loading .video-play-btn {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0.98);
+      transition: 0.2s ease;
+    }
 
-        .art-piece:hover { transform: translateY(-5px); }
-        .art-piece img { width: 100%; display: block; border-radius: 2px; }
-        .art-caption { margin-top: 15px; text-align: left; }
-        .art-title { font-family: var(--font-serif); font-size: 1rem; color: #222; margin-bottom: 5px; display: block; }
-        .art-desc { font-size: 0.75rem; color: #888; font-style: italic; display: block; line-height: 1.4; }
+    .film-info { flex: 1; }
+    .film-info h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 15px; }
+    .film-info .meta {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      margin-bottom: 25px;
+      border-left: 2px solid var(--text-main);
+      padding-left: 10px;
+    }
+    .fallback-link { font-size: 0.8rem; text-decoration: underline; color: var(--text-sub); }
 
-        #writing { background-color: #fff; }
-        .script-container { max-width: 800px; margin: 0 auto; border-left: 4px solid #eee; padding-left: 40px; }
-        .script-meta h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 5px; }
-        .script-meta span { font-family: var(--font-script); font-size: 0.8rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px; }
-        .script-content { font-family: var(--font-script); font-size: 1rem; line-height: 1.8; color: #333; background: #fafafa; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-top: 30px; position: relative; }
-        
-        .script-preview-mask {
-            position: absolute;
-            bottom: 0; left: 0; width: 100%; height: 150px;
-            background: linear-gradient(to bottom, transparent, #fafafa);
-        }
+    .collage-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; height: 500px; }
+    .collage-card { position: relative; height: 100%; overflow: hidden; transition: all 0.5s ease; cursor: zoom-in; }
+    .collage-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; filter: grayscale(100%); }
+    .collage-card:hover { flex-grow: 1.5; }
+    .collage-card:hover img { transform: scale(1.1); filter: grayscale(0%); }
+    .collage-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; background: linear-gradient(to top, rgba(255,255,255,0.95), transparent); color: #000; opacity: 0; transform: translateY(20px); transition: 0.4s; pointer-events: none; }
+    .collage-card:hover .collage-overlay { opacity: 1; transform: translateY(0); }
+    .collage-overlay h4 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0; }
+    .collage-overlay span { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; }
 
-        .slugline { font-weight: bold; text-transform: uppercase; margin-top: 20px; margin-bottom: 10px; color: #000; }
-        .action { margin-bottom: 15px; }
-        .dialogue-block { margin: 20px 0; padding: 0 20%; text-align: center; }
-        .character { font-weight: bold; text-transform: uppercase; margin-bottom: 2px; }
-        
-        .read-more-btn { 
-            display: inline-block; margin-top: 30px; 
-            font-family: var(--font-sans); font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 2px; 
-            border-bottom: 1px solid #000; padding-bottom: 5px; 
-            cursor: pointer; transition: 0.3s;
-        }
-        .read-more-btn:hover { color: var(--accent); border-color: var(--accent); }
+    #art { background-color: var(--bg-secondary); }
+    .art-gallery { column-count: 3; column-gap: 30px; }
+    @media (max-width: 1024px) { .art-gallery { column-count: 2; } }
+    @media (max-width: 768px) { .art-gallery { column-count: 1; } }
 
-        #script-modal {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: #fff; z-index: 9999;
-            overflow-y: scroll;
-            transform: translateY(100%);
-            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-            padding: 80px 20px;
-        }
-        #script-modal.active { transform: translateY(0); }
-        
-        .modal-close {
-            position: fixed; top: 30px; right: 30px;
-            font-family: var(--font-sans); font-size: 1rem;
-            cursor: pointer; padding: 10px 20px;
-            border: 1px solid #ddd; border-radius: 50px;
-            background: #fff; z-index: 10000;
-        }
-        .modal-close:hover { background: #000; color: #fff; border-color: #000; }
-        
-        .full-script-text {
-            max-width: 800px; margin: 0 auto;
-            font-family: var(--font-script); font-size: 1.1rem;
-            color: #222; padding-bottom: 100px;
-        }
-        .full-script-text p { margin-bottom: 20px; text-indent: 2em; } 
-        .full-script-text h2 { font-family: var(--font-serif); text-align: center; margin-bottom: 60px; font-size: 2.5rem; }
+    .art-piece {
+      margin-bottom: 30px;
+      break-inside: avoid;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+      transition: transform 0.3s;
+      cursor: zoom-in;
+    }
+    .art-piece:hover { transform: translateY(-5px); }
+    .art-piece img { width: 100%; display: block; border-radius: 2px; }
+    .art-caption { margin-top: 15px; text-align: left; }
+    .art-title { font-family: var(--font-serif); font-size: 1rem; color: #222; margin-bottom: 5px; display: block; }
+    .art-desc { font-size: 0.75rem; color: #888; font-style: italic; display: block; line-height: 1.4; }
 
-        #lightbox {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95); z-index: 10001;
-            display: none; justify-content: center; align-items: center;
-            opacity: 0; transition: opacity 0.3s;
-        }
-        #lightbox.visible { opacity: 1; }
-        #lightbox img { max-width: 90%; max-height: 90vh; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
-        #lightbox-close {
-            position: absolute; top: 30px; right: 40px;
-            color: #fff; font-size: 2rem; cursor: pointer; font-family: var(--font-sans);
-        }
+    #writing { background-color: #fff; }
+    .script-container { max-width: 800px; margin: 0 auto; border-left: 4px solid #eee; padding-left: 40px; }
+    .script-meta h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 5px; }
+    .script-meta span { font-family: var(--font-script); font-size: 0.8rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 1px; }
+    .script-content {
+      font-family: var(--font-script);
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #333;
+      background: #fafafa;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-top: 30px;
+      position: relative;
+    }
 
-        footer { padding: 80px 0; text-align: center; font-size: 0.8rem; color: var(--text-sub); letter-spacing: 1px; border-top: 1px solid rgba(0,0,0,0.05); }
+    .script-preview-mask {
+      position: absolute;
+      bottom: 0; left: 0; width: 100%; height: 150px;
+      background: linear-gradient(to bottom, transparent, #fafafa);
+    }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .slugline { font-weight: bold; text-transform: uppercase; margin-top: 20px; margin-bottom: 10px; color: #000; }
+    .action { margin-bottom: 15px; }
+    .dialogue-block { margin: 20px 0; padding: 0 20%; text-align: center; }
+    .character { font-weight: bold; text-transform: uppercase; margin-bottom: 2px; }
 
-        @media (max-width: 768px) {
-            .hero-title { font-size: 12vw; }
-            .film-item, .film-item:nth-child(even) { flex-direction: column; text-align: left; }
-            .collage-grid { grid-template-columns: 1fr; height: auto; }
-            .collage-card { height: 300px; margin-bottom: 10px; }
-            .collage-card img { filter: grayscale(0%); }
-            .script-content { padding: 20px; }
-            .dialogue-block { padding: 0; text-align: left; }
-            .script-container { padding-left: 20px; border: none; }
-        }
-    </style>
+    .read-more-btn {
+      display: inline-block; margin-top: 30px;
+      font-family: var(--font-sans); font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 2px;
+      border-bottom: 1px solid #000; padding-bottom: 5px;
+      cursor: pointer; transition: 0.3s;
+    }
+    .read-more-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+    #script-modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #fff; z-index: 9999;
+      overflow-y: scroll;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      padding: 80px 20px;
+    }
+    #script-modal.active { transform: translateY(0); }
+
+    .modal-close {
+      position: fixed; top: 30px; right: 30px;
+      font-family: var(--font-sans); font-size: 1rem;
+      cursor: pointer; padding: 10px 20px;
+      border: 1px solid #ddd; border-radius: 50px;
+      background: #fff; z-index: 10000;
+    }
+    .modal-close:hover { background: #000; color: #fff; border-color: #000; }
+
+    .full-script-text {
+      max-width: 800px; margin: 0 auto;
+      font-family: var(--font-script); font-size: 1.1rem;
+      color: #222; padding-bottom: 100px;
+    }
+    .full-script-text p { margin-bottom: 20px; text-indent: 2em; }
+    .full-script-text h2 { font-family: var(--font-serif); text-align: center; margin-bottom: 60px; font-size: 2.5rem; }
+
+    #lightbox {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95); z-index: 10001;
+      display: none; justify-content: center; align-items: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    #lightbox.visible { opacity: 1; }
+    #lightbox img { max-width: 90%; max-height: 90vh; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+    #lightbox-close {
+      position: absolute; top: 30px; right: 40px;
+      color: #fff; font-size: 2rem; cursor: pointer; font-family: var(--font-sans);
+    }
+
+    footer { padding: 80px 0; text-align: center; font-size: 0.8rem; color: var(--text-sub); letter-spacing: 1px; border-top: 1px solid rgba(0,0,0,0.05); }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 12vw; }
+      .film-item, .film-item:nth-child(even) { flex-direction: column; text-align: left; }
+      .collage-grid { grid-template-columns: 1fr; height: auto; }
+      .collage-card { height: 300px; margin-bottom: 10px; }
+      .collage-card img { filter: grayscale(0%); }
+      .script-content { padding: 20px; }
+      .dialogue-block { padding: 0; text-align: left; }
+      .script-container { padding-left: 20px; border: none; }
+    }
+  </style>
 </head>
+
 <body>
+  <nav>
+    <div class="logo">JOYCE ZHANG</div>
+    <div class="menu">
+      <a href="#films">Films</a>
+      <a href="#collage">Collage</a>
+      <a href="#art">Fine Arts</a>
+      <a href="#writing">Writing</a>
+    </div>
+  </nav>
 
-    <nav>
-        <div class="logo">JOYCE ZHANG</div>
-        <div class="menu">
-            <a href="#films">Films</a>
-            <a href="#collage">Collage</a>
-            <a href="#art">Fine Arts</a>
-            <a href="#writing">Writing</a>
-        </div>
-    </nav>
+  <header>
+    <h1 class="hero-title">Visual <em>Storyteller</em><br />& Director</h1>
+    <div class="hero-subtitle">Cinematic Portfolio 2025</div>
+  </header>
 
-    <header>
-        <h1 class="hero-title">Visual <em>Storyteller</em><br>& Director</h1>
-        <div class="hero-subtitle">Cinematic Portfolio 2025</div>
-    </header>
-
-    <section id="films">
-        <div class="section-header">
-            <h2 class="section-title">Selected Works</h2>
-            <p class="section-desc">Visual narratives exploring ritual, identity, and the subconscious.</p>
-        </div>
-
-        <div class="film-item">
-            <div class="video-box">
-                <img src="cover_last_rite.jpg" alt="The Last Rite still" class="video-cover">
-                <a href="https://youtu.be/Mta2oElLeqY" target="_blank" class="video-play-btn">▶</a>
-            </div>
-            <div class="film-info">
-                <h3>The Last Rite (傩)</h3>
-                <span class="meta">Documentary / Cultural Essay | 4:59</span>
-                <p>A meditative observation of ancient rituals fading into modern silence. Exploring the tension between traditional performance and contemporary observation.</p>
-                <a href="https://youtu.be/Mta2oElLeqY" target="_blank" class="fallback-link">Watch on YouTube &rarr;</a>
-            </div>
-        </div>
-
-        <div class="film-item">
-            <div class="video-box">
-                <img src="cover_unknown.jpg" alt="Unknown still" class="video-cover">
-                <a href="https://youtu.be/Q_ud78FqyXA" target="_blank" class="video-play-btn">▶</a>
-            </div>
-            <div class="film-info">
-                <h3>Unknown</h3>
-                <span class="meta">Experimental Short | 2:22</span>
-                <p>An abstract journey through visual ambiguity. Using non-linear editing to challenge the viewer's perception of narrative time and identity.</p>
-                <a href="https://youtu.be/Q_ud78FqyXA" target="_blank" class="fallback-link">Watch on YouTube &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="collage">
-        <div class="section-header">
-            <h2 class="section-title">Project Collage</h2>
-            <p class="section-desc">AP Psychology</p>
-        </div>
-
-        <div class="collage-grid">
-            <div class="collage-card">
-                <img src="image_fbc459.jpg" alt="Silence of the Lambs">
-                <div class="collage-overlay">
-                    <h4>Silence of the Lambs</h4>
-                    <span>Antisocial Personality</span>
-                </div>
-            </div>
-            <div class="collage-card">
-                <img src="image_fbc43f.jpg" alt="Black Swan">
-                <div class="collage-overlay">
-                    <h4>Black Swan</h4>
-                    <span>Narcissistic Disorder</span>
-                </div>
-            </div>
-            <div class="collage-card">
-                <img src="image_fbc43b.jpg" alt="Taxi Driver">
-                <div class="collage-overlay">
-                    <h4>Taxi Driver</h4>
-                    <span>PTSD</span>
-                </div>
-            </div>
-            <div class="collage-card">
-                <img src="image_fbc436.jpg" alt="Perfect Blue">
-                <div class="collage-overlay">
-                    <h4>Perfect Blue</h4>
-                    <span>Schizophrenia</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="art">
-        <div class="section-header">
-            <h2 class="section-title">Solitude & Spaces</h2>
-            <p class="section-desc">A study of isolation within school environments. (Full Collection)</p>
-        </div>
-
-        <div class="art-gallery">
-            <div class="art-piece"><img src="art1.jpg" alt="Art"><div class="art-caption"><span class="art-title">Graduation Isolation</span></div></div>
-            <div class="art-piece"><img src="art2.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Inspiration</span></div></div>
-            <div class="art-piece"><img src="art3.jpg" alt="Art"><div class="art-caption"><span class="art-title">Classroom Corner</span></div></div>
-            <div class="art-piece"><img src="art4.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Color Study</span></div></div>
-            <div class="art-piece"><img src="art5.jpg" alt="Art"><div class="art-caption"><span class="art-title">Pressure & Balloons</span></div></div>
-            <div class="art-piece"><img src="art6.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Sketch</span></div></div>
-            <div class="art-piece"><img src="art7.jpg" alt="Art"><div class="art-caption"><span class="art-title">Confined Space</span></div></div>
-            <div class="art-piece"><img src="art8.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Test Papers</span></div></div>
-            <div class="art-piece"><img src="art9.jpg" alt="Art"><div class="art-caption"><span class="art-title">Survival of the Fittest</span></div></div>
-            <div class="art-piece"><img src="art10.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Iron Mesh</span></div></div>
-            <div class="art-piece"><img src="art11.jpg" alt="Art"><div class="art-caption"><span class="art-title">Night Classroom</span></div></div>
-            <div class="art-piece"><img src="art12.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Techniques</span></div></div>
-            <div class="art-piece"><img src="art13.jpg" alt="Art"><div class="art-caption"><span class="art-title">Dormitory Space</span></div></div>
-            <div class="art-piece"><img src="art14.jpg" alt="Art"><div class="art-caption"><span class="art-title">Process: Composition</span></div></div>
-            <div class="art-piece"><img src="art15.jpg" alt="Art"><div class="art-caption"><span class="art-title">Corridor Contrast</span></div></div>
-        </div>
-    </section>
-
-    <section id="writing">
-        <div class="section-header">
-            <h2 class="section-title">Screenwriting</h2>
-            <p class="section-desc">Original stories & scripts.</p>
-        </div>
-
-        <div class="script-container">
-            <div class="script-meta">
-                <h3>The Antique Shop of Time</h3>
-                <span>Fantasy / Thriller | Short Story</span>
-            </div>
-
-            <div class="script-content">
-                <div class="slugline">EXT. ANTIQUE SHOP - NIGHT</div>
-                <div class="action">
-                    The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream.
-                </div>
-                <div class="action">
-                    Ten-year-old KRIS tightened the strap of his backpack. The weight dug into his shoulders. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground.
-                </div>
-                <div class="dialogue-block">
-                    <div class="character">KRIS</div>
-                    <div class="dialogue">Just me again.</div>
-                </div>
-                <div class="action">
-                    He sighed and turned down a narrow alley he had never taken before. Then he heard it—a melody floating through the air.
-                </div>
-                <div class="script-preview-mask"></div>
-            </div>
-            
-            <div class="read-more-btn" onclick="openScript()">READ FULL SCRIPT &rarr;</div>
-        </div>
-    </section>
-
-    <div id="script-modal">
-        <div class="modal-close" onclick="closeScript()">CLOSE X</div>
-        <div class="full-script-text">
-            <h2>The Antique Shop of Time</h2>
-            <p>The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream. The last voices from the playground faded away, leaving only the golden light slowly ebbing from the world.</p>
-            <p>Ten-year-old Kris tightened the strap of his backpack. The weight dug into his shoulders, leaving faint marks of pain. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground. Around him, one by one, the children were picked up by their parents. Laughter and footsteps receded into the distance until only silence remained.</p>
-            <p>Time, it seemed, had deliberately passed him by. He looked down the familiar street but saw no familiar car.</p>
-            <p>“Just me again,” he murmured.</p>
-            <p>Countless evenings like this flashed before him— Each time he went home with a smile, only to be greeted by a note taped to the door: <em>Kris, sorry. Mom and Dad have to work late again.</em> The neat handwriting felt like a wall between him and warmth.</p>
-            <p>He sighed and turned down a narrow alley he had never taken before. “Maybe a different way home will make things more interesting,” he thought.</p>
-            <p>Then he heard it—a melody floating through the air. Delicate, crystalline, like an old music box—but older, deeper, almost alive. Following the sound, he found a half-buried music box hidden among the grass. He brushed off the dirt and gently lifted the lid—</p>
-            <p>A burst of golden light exploded outward. A small glowing fairy emerged, wings scattering flecks of light. She circled him once, then darted toward the dark end of the alley. Kris hesitated only for a moment before running after her.</p>
-            <p>Through trees, falling leaves, and gathering dusk, he chased until he reached an old building. The door bore a tarnished brass plate: <strong>The Antique Shop of Time.</strong></p>
-            <p>As he pushed the door open, a chill wind swept out from within. Under dim yellow light, the shop was filled with clocks. The ticking came from every direction—disordered, yet somehow harmonized.</p>
-            <p>“Welcome, young man.” The voice came softly from the shadows. A thin old man stepped forward, wearing a magnifying lens over one eye. “I’ve been waiting a long time for you.”</p>
-            <p>Kris shifted awkwardly. “I’m looking for a little fairy… she flew in here.”</p>
-            <p>The old man chuckled. “Ah… the fairy only brings children who need more time.” He pointed to the clocks. “Each clock carries its owner’s time—some wished it to move faster, some slower… and some wished it would stop forever.”</p>
-            <p>Kris whispered, “I wish time would slow down. Then Mom and Dad could spend more time with me.”</p>
-            <p>The old man smiled faintly. “How pure your wish is. Come back after school, every day.”</p>
-            <p>⸻</p>
-            <p>From that day on, Kris did. But slowly, strange things began to happen. Outside, it was always dusk. And on the wall, the great clock’s hands never moved. One afternoon, the old man said, “I’ve figured it out. A way to make time slower.” He led Kris to a tall mirror carved from black oak.</p>
-            <p>Mist clouded the glass. As it cleared, Kris saw countless pale faces trapped behind the glass—children’s faces, silently screaming. The old man’s voice turned metallic. “Your time is fresh. Sweet. I haven’t tasted time like this in years.”</p>
-            <p>The old man’s eyes were no longer eyes—only two grinding brass gears. He reached out a bony hand. Kris stumbled back, realizing the truth: The shopkeeper was a monster feeding on stolen time.</p>
-            <p>“Run!” the mirror whispered.</p>
-            <p>Kris ran. Gears exploded, clocks shattered. He spotted the source—a massive grandfather clock with a blood-red face spinning backward. With a final burst of courage, Kris threw himself at it.</p>
-            <p>CRASH.</p>
-            <p>Time ripped apart. The old man crumbled into dust.</p>
-            <p>When Kris opened his eyes, he was back in the woods. The shop was gone. Only a faint ticking lingered in the air, as if somewhere, somehow, time was still moving on.</p>
-        </div>
+  <section id="films">
+    <div class="section-header">
+      <h2 class="section-title">Selected Works</h2>
+      <p class="section-desc">Visual narratives exploring ritual, identity, and the subconscious.</p>
     </div>
 
-    <div id="lightbox" onclick="closeLightbox()">
-        <span id="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="">
+    <div class="film-item">
+      <div class="video-box" data-video-id="Mta2oElLeqY" data-video-url="https://youtu.be/Mta2oElLeqY">
+        <div class="yt-player" aria-hidden="true"></div>
+        <img src="cover_last_rite.jpg" alt="The Last Rite still" class="video-cover" loading="lazy" />
+        <button class="video-play-btn" type="button" aria-label="Play The Last Rite">▶</button>
+      </div>
+
+      <div class="film-info">
+        <h3>The Last Rite (傩)</h3>
+        <span class="meta">Documentary / Cultural Essay | 4:59</span>
+        <p>A meditative observation of ancient rituals fading into modern silence. Exploring the tension between traditional performance and contemporary observation.</p>
+        <a href="https://youtu.be/Mta2oElLeqY" target="_blank" rel="noopener" class="fallback-link">Watch on YouTube &rarr;</a>
+      </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 JOYCE ZHANG. DESIGNED FOR CINEMA.</p>
-    </footer>
+    <div class="film-item">
+      <div class="video-box" data-video-id="Q_ud78FqyXA" data-video-url="https://youtu.be/Q_ud78FqyXA">
+        <div class="yt-player" aria-hidden="true"></div>
+        <img src="cover_unknown.jpg" alt="Unknown still" class="video-cover" loading="lazy" />
+        <button class="video-play-btn" type="button" aria-label="Play Unknown">▶</button>
+      </div>
 
-    <script>
-        function openScript() {
-            document.getElementById('script-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+      <div class="film-info">
+        <h3>Unknown</h3>
+        <span class="meta">Experimental Short | 2:22</span>
+        <p>An abstract journey through visual ambiguity. Using non-linear editing to challenge the viewer's perception of narrative time and identity.</p>
+        <a href="https://youtu.be/Q_ud78FqyXA" target="_blank" rel="noopener" class="fallback-link">Watch on YouTube &rarr;</a>
+      </div>
+    </div>
+  </section>
 
-        function closeScript() {
-            document.getElementById('script-modal').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+  <section id="collage">
+    <div class="section-header">
+      <h2 class="section-title">Project Collage</h2>
+      <p class="section-desc">AP Psychology</p>
+    </div>
 
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        
-        const images = document.querySelectorAll('.collage-card img, .art-piece img');
-        
-        images.forEach(img => {
-            img.addEventListener('click', e => {
-                e.stopPropagation();
-                lightboxImg.src = img.src;
-                lightbox.style.display = 'flex';
-                setTimeout(() => { lightbox.classList.add('visible'); }, 10);
-            });
+    <div class="collage-grid">
+      <div class="collage-card">
+        <img src="image_fbc459.jpg" alt="Silence of the Lambs" />
+        <div class="collage-overlay">
+          <h4>Silence of the Lambs</h4>
+          <span>Antisocial Personality</span>
+        </div>
+      </div>
+      <div class="collage-card">
+        <img src="image_fbc43f.jpg" alt="Black Swan" />
+        <div class="collage-overlay">
+          <h4>Black Swan</h4>
+          <span>Narcissistic Disorder</span>
+        </div>
+      </div>
+      <div class="collage-card">
+        <img src="image_fbc43b.jpg" alt="Taxi Driver" />
+        <div class="collage-overlay">
+          <h4>Taxi Driver</h4>
+          <span>PTSD</span>
+        </div>
+      </div>
+      <div class="collage-card">
+        <img src="image_fbc436.jpg" alt="Perfect Blue" />
+        <div class="collage-overlay">
+          <h4>Perfect Blue</h4>
+          <span>Schizophrenia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="art">
+    <div class="section-header">
+      <h2 class="section-title">Solitude & Spaces</h2>
+      <p class="section-desc">A study of isolation within school environments. (Full Collection)</p>
+    </div>
+
+    <div class="art-gallery">
+      <div class="art-piece"><img src="art1.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Graduation Isolation</span></div></div>
+      <div class="art-piece"><img src="art2.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Inspiration</span></div></div>
+      <div class="art-piece"><img src="art3.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Classroom Corner</span></div></div>
+      <div class="art-piece"><img src="art4.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Color Study</span></div></div>
+      <div class="art-piece"><img src="art5.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Pressure & Balloons</span></div></div>
+      <div class="art-piece"><img src="art6.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Sketch</span></div></div>
+      <div class="art-piece"><img src="art7.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Confined Space</span></div></div>
+      <div class="art-piece"><img src="art8.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Test Papers</span></div></div>
+      <div class="art-piece"><img src="art9.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Survival of the Fittest</span></div></div>
+      <div class="art-piece"><img src="art10.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Iron Mesh</span></div></div>
+      <div class="art-piece"><img src="art11.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Night Classroom</span></div></div>
+      <div class="art-piece"><img src="art12.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Techniques</span></div></div>
+      <div class="art-piece"><img src="art13.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Dormitory Space</span></div></div>
+      <div class="art-piece"><img src="art14.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Process: Composition</span></div></div>
+      <div class="art-piece"><img src="art15.jpg" alt="Art" /><div class="art-caption"><span class="art-title">Corridor Contrast</span></div></div>
+    </div>
+  </section>
+
+  <section id="writing">
+    <div class="section-header">
+      <h2 class="section-title">Screenwriting</h2>
+      <p class="section-desc">Original stories & scripts.</p>
+    </div>
+
+    <div class="script-container">
+      <div class="script-meta">
+        <h3>The Antique Shop of Time</h3>
+        <span>Fantasy / Thriller | Short Story</span>
+      </div>
+
+      <div class="script-content">
+        <div class="slugline">EXT. ANTIQUE SHOP - NIGHT</div>
+        <div class="action">The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream.</div>
+        <div class="action">Ten-year-old KRIS tightened the strap of his backpack. The weight dug into his shoulders. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground.</div>
+        <div class="dialogue-block">
+          <div class="character">KRIS</div>
+          <div class="dialogue">Just me again.</div>
+        </div>
+        <div class="action">He sighed and turned down a narrow alley he had never taken before. Then he heard it—a melody floating through the air.</div>
+        <div class="script-preview-mask"></div>
+      </div>
+
+      <div class="read-more-btn" onclick="openScript()">READ FULL SCRIPT &rarr;</div>
+    </div>
+  </section>
+
+  <div id="script-modal">
+    <div class="modal-close" onclick="closeScript()">CLOSE X</div>
+    <div class="full-script-text">
+      <h2>The Antique Shop of Time</h2>
+      <p>The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream. The last voices from the playground faded away, leaving only the golden light slowly ebbing from the world.</p>
+      <p>Ten-year-old Kris tightened the strap of his backpack. The weight dug into his shoulders, leaving faint marks of pain. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground. Around him, one by one, the children were picked up by their parents. Laughter and footsteps receded into the distance until only silence remained.</p>
+      <p>Time, it seemed, had deliberately passed him by. He looked down the familiar street but saw no familiar car.</p>
+      <p>“Just me again,” he murmured.</p>
+      <p>Countless evenings like this flashed before him— Each time he went home with a smile, only to be greeted by a note taped to the door: <em>Kris, sorry. Mom and Dad have to work late again.</em> The neat handwriting felt like a wall between him and warmth.</p>
+      <p>He sighed and turned down a narrow alley he had never taken before. “Maybe a different way home will make things more interesting,” he thought.</p>
+      <p>Then he heard it—a melody floating through the air. Delicate, crystalline, like an old music box—but older, deeper, almost alive. Following the sound, he found a half-buried music box hidden among the grass. He brushed off the dirt and gently lifted the lid—</p>
+      <p>A burst of golden light exploded outward. A small glowing fairy emerged, wings scattering flecks of light. She circled him once, then darted toward the dark end of the alley. Kris hesitated only for a moment before running after her.</p>
+      <p>Through trees, falling leaves, and gathering dusk, he chased until he reached an old building. The door bore a tarnished brass plate: <strong>The Antique Shop of Time.</strong></p>
+      <p>As he pushed the door open, a chill wind swept out from within. Under dim yellow light, the shop was filled with clocks. The ticking came from every direction—disordered, yet somehow harmonized.</p>
+      <p>“Welcome, young man.” The voice came softly from the shadows. A thin old man stepped forward, wearing a magnifying lens over one eye. “I’ve been waiting a long time for you.”</p>
+      <p>Kris shifted awkwardly. “I’m looking for a little fairy… she flew in here.”</p>
+      <p>The old man chuckled. “Ah… the fairy only brings children who need more time.” He pointed to the clocks. “Each clock carries its owner’s time—some wished it to move faster, some slower… and some wished it would stop forever.”</p>
+      <p>Kris whispered, “I wish time would slow down. Then Mom and Dad could spend more time with me.”</p>
+      <p>The old man smiled faintly. “How pure your wish is. Come back after school, every day.”</p>
+      <p>⸻</p>
+      <p>From that day on, Kris did. But slowly, strange things began to happen. Outside, it was always dusk. And on the wall, the great clock’s hands never moved. One afternoon, the old man said, “I’ve figured it out. A way to make time slower.” He led Kris to a tall mirror carved from black oak.</p>
+      <p>Mist clouded the glass. As it cleared, Kris saw countless pale faces trapped behind the glass—children’s faces, silently screaming. The old man’s voice turned metallic. “Your time is fresh. Sweet. I haven’t tasted time like this in years.”</p>
+      <p>The old man’s eyes were no longer eyes—only two grinding brass gears. He reached out a bony hand. Kris stumbled back, realizing the truth: The shopkeeper was a monster feeding on stolen time.</p>
+      <p>“Run!” the mirror whispered.</p>
+      <p>Kris ran. Gears exploded, clocks shattered. He spotted the source—a massive grandfather clock with a blood-red face spinning backward. With a final burst of courage, Kris threw himself at it.</p>
+      <p>CRASH.</p>
+      <p>Time ripped apart. The old man crumbled into dust.</p>
+      <p>When Kris opened his eyes, he was back in the woods. The shop was gone. Only a faint ticking lingered in the air, as if somewhere, somehow, time was still moving on.</p>
+    </div>
+  </div>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 JOYCE ZHANG. DESIGNED FOR CINEMA.</p>
+  </footer>
+
+  <script>
+    function openScript() {
+      document.getElementById("script-modal").classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeScript() {
+      document.getElementById("script-modal").classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".collage-card img, .art-piece img");
+
+    images.forEach((img) => {
+      img.addEventListener("click", (e) => {
+        e.stopPropagation();
+        lightboxImg.src = img.src;
+        lightbox.style.display = "flex";
+        setTimeout(() => lightbox.classList.add("visible"), 10);
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("visible");
+      setTimeout(() => (lightbox.style.display = "none"), 300);
+    }
+
+    (function () {
+      const boxes = document.querySelectorAll(".video-box");
+      const playerByBox = new WeakMap();
+
+      const API_LOAD_MAX_MS = 1200;
+      const PLAYER_READY_MAX_MS = 2200;
+
+      let apiReady = false;
+      let apiPromise = null;
+
+      function isInAppBrowserLikelyBlocked() {
+        const ua = navigator.userAgent || "";
+        return /MicroMessenger|Weibo|QQ\/|QQBrowser|FBAN|FBAV|Instagram|Line\/|TikTok|Douyin|Kwai|Twitter/i.test(ua);
+      }
+
+      function isProbablyBadContextForEmbed() {
+        const notSecure = location.protocol !== "https:" && location.hostname !== "localhost";
+        return notSecure || isInAppBrowserLikelyBlocked();
+      }
+
+      function gotoYouTube(url) {
+        window.location.href = url;
+      }
+
+      function delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      function loadYouTubeAPIWithTimeout() {
+        if (apiReady) return Promise.resolve();
+        if (apiPromise) return apiPromise;
+
+        apiPromise = new Promise((resolve, reject) => {
+          if (window.YT && window.YT.Player) {
+            apiReady = true;
+            resolve();
+            return;
+          }
+
+          const tag = document.createElement("script");
+          tag.src = "https://www.youtube.com/iframe_api";
+          tag.async = true;
+          tag.onerror = () => reject(new Error("iframe_api load error"));
+          document.head.appendChild(tag);
+
+          window.onYouTubeIframeAPIReady = () => {
+            apiReady = true;
+            resolve();
+          };
         });
 
-        function closeLightbox() {
-            lightbox.classList.remove('visible');
-            setTimeout(() => { lightbox.style.display = 'none'; }, 300);
-        }
-    </script>
+        return Promise.race([
+          apiPromise,
+          delay(API_LOAD_MAX_MS).then(() => { throw new Error("iframe_api timeout"); })
+        ]);
+      }
 
+      function createPlayerForBox(box, readyTimeoutMs) {
+        const videoId = box.getAttribute("data-video-id");
+        const videoUrl = box.getAttribute("data-video-url");
+        const mount = box.querySelector(".yt-player");
+        if (!videoId || !videoUrl || !mount) return gotoYouTube(videoUrl);
+
+        if (playerByBox.get(box)) return;
+
+        box.classList.add("is-loading");
+
+        let ready = false;
+        let player = null;
+
+        const watchdog = setTimeout(() => {
+          if (!ready) {
+            try { player && player.destroy && player.destroy(); } catch (_) {}
+            box.classList.remove("is-loading");
+            gotoYouTube(videoUrl);
+          }
+        }, readyTimeoutMs);
+
+        try {
+          player = new YT.Player(mount, {
+            videoId,
+            width: "100%",
+            height: "100%",
+            playerVars: {
+              autoplay: 1,
+              playsinline: 1,
+              rel: 0,
+              modestbranding: 1,
+              origin: window.location.origin
+            },
+            events: {
+              onReady: (e) => {
+                ready = true;
+                clearTimeout(watchdog);
+                box.classList.remove("is-loading");
+                box.classList.add("is-playing");
+                try { e.target.playVideo(); } catch (_) {}
+              },
+              onError: () => {
+                clearTimeout(watchdog);
+                try { player && player.destroy && player.destroy(); } catch (_) {}
+                box.classList.remove("is-loading");
+                gotoYouTube(videoUrl);
+              }
+            }
+          });
+
+          playerByBox.set(box, player);
+        } catch (_) {
+          clearTimeout(watchdog);
+          box.classList.remove("is-loading");
+          gotoYouTube(videoUrl);
+        }
+      }
+
+      boxes.forEach((box) => {
+        const btn = box.querySelector(".video-play-btn");
+        const url = box.getAttribute("data-video-url");
+
+        btn.addEventListener("click", async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          if (isProbablyBadContextForEmbed()) {
+            gotoYouTube(url);
+            return;
+          }
+
+          try {
+            await loadYouTubeAPIWithTimeout();
+            if (!window.YT || !window.YT.Player) throw new Error("YT not available");
+            createPlayerForBox(box, PLAYER_READY_MAX_MS);
+          } catch (_) {
+            gotoYouTube(url);
+          }
+        });
+
+        box.addEventListener("click", (e) => {
+          if (box.classList.contains("is-playing")) return;
+          if (e.target === btn) return;
+          btn.click();
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
