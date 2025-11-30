@@ -365,7 +365,6 @@
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         cursor: zoom-in;
     }
-    /* 删除了 .art-caption 的CSS，因为不再需要显示文字 */
 
     #writing { background-color: var(--bg-color); }
     .script-container {
@@ -413,6 +412,31 @@
     }
     .modal-close:hover { background: #000; color: #fff; border-color: #000; }
     .full-script { max-width: 700px; margin: 0 auto; font-family: var(--font-script); font-size: 1.1rem; padding-bottom: 100px; }
+    
+    .script-note {
+        margin: 20px 40px;
+        padding: 20px;
+        border: 1px dashed #ccc;
+        background: #fafafa;
+        font-style: italic;
+    }
+    .script-divider {
+        text-align: center;
+        margin: 40px 0;
+        color: #bbb;
+    }
+    .script-sign {
+        text-align: center;
+        font-weight: bold;
+        margin: 30px 0;
+        letter-spacing: 2px;
+    }
+    .script-whisper {
+        text-align: center;
+        font-style: italic;
+        color: #666;
+        margin: 30px 0;
+    }
 
     #lightbox {
         position: fixed; inset: 0; background: rgba(10,10,10,0.98); z-index: 10001;
@@ -566,12 +590,9 @@
       </div>
 
       <div class="script-body">
-        <p>EXT. ANTIQUE SHOP - NIGHT</p>
-        <p>The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream.</p>
-        <br>
-        <p style="text-align:center; padding: 20px 0;">KRIS<br>Just me again.</p>
-        <br>
-        <p>He sighed and turned down a narrow alley he had never taken before. Then he heard it—a melody floating through the air.</p>
+        <p>The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream. The last voices from the playground faded away, leaving only the golden light slowly ebbing from the world.</p>
+        <p>Ten-year-old Kris tightened the strap of his backpack. The weight dug into his shoulders, leaving faint marks of pain. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground. Around him, one by one, the children were picked up by their parents. Laughter and footsteps receded into the distance until only silence remained.</p>
+        <p>Time, it seemed, had deliberately passed him by.</p>
       </div>
 
       <div class="read-more-btn" onclick="openScript()">READ FULL SCRIPT</div>
@@ -582,21 +603,82 @@
     <div class="modal-close" onclick="closeScript()">CLOSE</div>
     <div class="full-script">
       <h2 style="text-align:center; margin-bottom:50px;">The Antique Shop of Time</h2>
+      
       <p>The evening wind drifted through the schoolyard, carrying the coolness of early autumn and the sigh of an old dream. The last voices from the playground faded away, leaving only the golden light slowly ebbing from the world.</p>
-      <p>Ten-year-old Kris tightened the strap of his backpack. The weight dug into his shoulders, leaving faint marks of pain. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground. Around him, one by one, the children were picked up by their parents. Laughter and footsteps receded into the distance until only silence remained.</p>
-      <p>Time, it seemed, had deliberately passed him by. He looked down the familiar street but saw no familiar car.</p>
-      <p>“Just me again,” he murmured.</p>
-      <p>Countless evenings like this flashed before him— Each time he went home with a smile, only to be greeted by a note taped to the door: <em>Kris, sorry. Mom and Dad have to work late again.</em> The neat handwriting felt like a wall between him and warmth.</p>
-      <p>He sighed and turned down a narrow alley he had never taken before. “Maybe a different way home will make things more interesting,” he thought.</p>
-      <p>Then he heard it—a melody floating through the air. Delicate, crystalline, like an old music box—but older, deeper, almost alive. Following the sound, he found a half-buried music box hidden among the grass. He brushed off the dirt and gently lifted the lid—</p>
-      <p>A burst of golden light exploded outward. A small glowing fairy emerged, wings scattering flecks of light. She circled him once, then darted toward the dark end of the alley. Kris hesitated only for a moment before running after her.</p>
-      <p>Through trees, falling leaves, and gathering dusk, he chased until he reached an old building. The door bore a tarnished brass plate: <strong>The Antique Shop of Time.</strong></p>
-      <p>As he pushed the door open, a chill wind swept out from within. Under dim yellow light, the shop was filled with clocks. The ticking came from every direction—disordered, yet somehow harmonized.</p>
-      <p>“Welcome, young man.” The voice came softly from the shadows. A thin old man stepped forward, wearing a magnifying lens over one eye. “I’ve been waiting a long time for you.”</p>
+      <p>Ten-year-old Kris tightened the strap of his backpack. The weight dug into his shoulders, leaving faint marks of pain. He stood by the iron gate as sunlight pooled on his shoes, his shadow stretching long across the ground. Around him, one by one, the children were picked up by their parents. Laughter and footsteps receded into the distance until only silence remained.<br>Time, it seemed, had deliberately passed him by.</p>
+      <p>He looked down the familiar street but saw no familiar car.<br>“Just me again,” he murmured.</p>
+      <p>Countless evenings like this flashed before him—<br>Each time he went home with a smile, only to be greeted by a note taped to the door:</p>
+
+      <div class="script-note">Kris, sorry. Mom and Dad have to work late again.</div>
+
+      <p>The neat handwriting felt like a wall between him and warmth.<br>He never understood why it was always him who had to wait.</p>
+      <p>He sighed and turned down a narrow alley he had never taken before.<br>“Maybe a different way home will make things more interesting,” he thought.</p>
+      <p>Then he heard it—a melody floating through the air.<br>Delicate, crystalline, like an old music box—but older, deeper, almost alive.<br>Following the sound, he found a half-buried music box hidden among the grass. The case was carved with fine golden lines, a maze of tiny interlocking gears.</p>
+      <p>He brushed off the dirt and gently lifted the lid—</p>
+      <p>A burst of golden light exploded outward.<br>A small glowing fairy emerged, wings scattering flecks of light. She circled him once, then darted toward the dark end of the alley.<br>Kris hesitated only for a moment before running after her.</p>
+      <p>Through trees, falling leaves, and gathering dusk, he chased until he reached an old building. The door bore a tarnished brass plate, barely legible:</p>
+
+      <div class="script-sign">The Antique Shop of Time.</div>
+
+      <p>As he pushed the door open, a chill wind swept out from within. The air smelled faintly of iron, old wood, and machine oil. Under dim yellow light, the shop was filled with clocks—grandfather clocks, mantel clocks, pocket watches, wall clocks, even an hourglass hanging upside down from the ceiling.<br>The ticking came from every direction—disordered, yet somehow harmonized.</p>
+      <p>“Welcome, young man.”<br>The voice came softly from the shadows.</p>
+      <p>A thin old man stepped forward, wearing a magnifying lens over one eye. In his hand he turned a tiny brass gear between his fingers. His smile was gentle, his tone quiet.<br>“I’ve been waiting a long time for you.”</p>
       <p>Kris shifted awkwardly. “I’m looking for a little fairy… she flew in here.”</p>
-      <p>The old man chuckled. “Ah… the fairy only brings children who need more time.” He pointed to the clocks. “Each clock carries its owner’s time—some wished it to move faster, some slower… and some wished it would stop forever.”</p>
+      <p>The old man chuckled. “Ah… the fairy only brings children who need more time.”</p>
+      <p>Kris looked around. The clocks all showed different hours.<br>“Are they broken?”</p>
+      <p>“No,” said the old man, shaking his head. “They come from different ages. Each clock carries its owner’s time—some wished it to move faster, some slower… and some wished it would stop forever.”</p>
       <p>Kris whispered, “I wish time would slow down. Then Mom and Dad could spend more time with me.”</p>
-      <p>The old man smiled faintly. “How pure your wish is. Come back after school, every day.”</p>
+      <p>The old man paused, then smiled faintly. “How pure your wish is. Time likes hearts like yours.”<br>His voice was soft as wind, yet something cold flickered in his eyes.<br>“Come back after school, every day,” he said.</p>
+
+      <div class="script-divider">⸻</div>
+
+      <p>From that day on, Kris did.<br>Sunlight, rain, twilight, and storm—all felt the same inside that shop, where time seemed to stand still.</p>
+      <p>He helped the old man polish the clocks and listened to his stories about time—<br>stories of people who made time run faster and lost their youth,<br>of others who froze it and never woke again.</p>
+      <p>But slowly, strange things began to happen.<br>Outside, it was always dusk.<br>He could no longer remember what day it was.<br>And on the wall, the great clock’s hands never moved—<br>forever stuck at the hour school had ended that first day.</p>
+
+      <div class="script-divider">⸻</div>
+
+      <p>One afternoon, the old man said suddenly,<br>“I’ve figured it out. A way to make time slower.”</p>
+      <p>He lifted a lamp; its flame flickered behind a glass shade.<br>“Come, I’ll show you.”</p>
+      <p>They walked through a long corridor, deeper into the shop’s darkness.<br>“Wait here,” the old man said. “I just need to fetch something.”</p>
+      <p>The air grew colder. The ticking grew denser, like rain falling on metal.<br>From every corner came a whisper:</p>
+
+      <div class="script-whisper">Tick-tock, tick-tock… you will stay too…</div>
+
+      <p>Kris shivered.<br>Then he saw it—a tall mirror against the wall. The frame was carved from black oak, twisted with creeping vines. Mist clouded the glass.<br>He stepped closer. His reflection wavered, half lost in fog.<br>He raised his hand—<br>but the boy in the mirror did not move.</p>
+      <p>The reflection slowly lifted its head and smiled.<br>A stiff, frozen smile.</p>
+      <p>As the mist cleared, countless pale faces emerged behind the glass.<br>Children’s faces—blank-eyed, mouths half open, silently calling out.<br>Some were half missing, others were shadows, sliced apart by time itself.</p>
+      <p>The air turned icy. All the clocks began to quicken, their ticking rising into a frantic rhythm.</p>
+      <p>A faint voice whispered from deep within the mirror:<br>“Run… run… He’s not human… He feeds on our time… keeps us here forever…”</p>
+      <p>Kris staggered backward.<br>The mirror shuddered violently; all the faces turned toward him, black eyes fixed on his.<br>Gray hands pressed out from the surface, dripping with cold.</p>
+      <p>“Help… us…”<br>“Stay… with us…”</p>
+      <p>He tried to run but collided with something cold behind him.</p>
+      <p>“Not you, little one.”</p>
+      <p>The voice exploded beside his ear. Kris spun around—</p>
+      <p>The old man stood there.<br>But his eyes were no longer eyes—only two grinding brass gears, spinning and shrieking. His face looked melted, twisted like soft wax; his grin had frozen into a broken crack.</p>
+      <p>“Your time,” he rasped, “is fresh. Sweet. I haven’t tasted time like this in years.”</p>
+      <p>He reached out a long, bony hand—slow, deliberate, inevitable.<br>“Come, child. Don’t be afraid. You’ll never be alone again.”</p>
+      <p>Kris stumbled back. Behind him, the mirror howled with whispers and fists pounding on the glass—pleading, warning, urging him to flee.<br>All around, the clocks spun out of control. The ticking turned into chaos, rising, screaming—</p>
+      <p>He ran.</p>
+      <p>The floor groaned beneath him. Pendulums swung wildly on either side.<br>The old man’s footsteps echoed close behind—each thud a heavy heartbeat.</p>
+      <p>He leapt over fallen gears, crashed through shelves, and sent pocket watches scattering across the floor in a ringing metallic storm.<br>“Run all you want!” the old man’s voice shrieked, distorted and metallic. “You can’t outrun time!”</p>
+      <p>Ahead stood a massive grandfather clock.<br>Its face glowed blood-red, its second hand spinning backward.</p>
+      <p>Kris somehow knew—that was the source.<br>He clenched his fists, drew a breath, and charged.</p>
+      <p>“Stop!” roared the old man, gears screaming within his chest.<br>Kris threw himself forward and toppled the clock.</p>
+      <p>A deafening crash split the air.<br>Glass shattered. Gears exploded like sparks.<br>Every clock in the shop burst open at once.<br>Time ripped apart—then silence.</p>
+      <p>The old man’s body twisted, crumbled, and turned to gray dust, swirling away into the wind.</p>
+
+      <div class="script-divider">⸻</div>
+
+      <p>When Kris opened his eyes again, everything was quiet.<br>He was standing in the woods. Moonlight spilled through the branches.<br>At his feet lay the music box, half-buried in leaves.</p>
+      <p>He picked it up, brushed it clean, and gently closed the lid.<br>The wind brushed against his cheek.</p>
+      <p>He turned toward home. His shadow stretched long across the pale road, fading into the night.</p>
+      <p>Behind him, in the depths of the forest, something creaked softly.<br>He glanced back. Through the drifting mist, a wooden sign swayed in the breeze.</p>
+
+      <div class="script-sign">The Antique Shop of Time.</div>
+
+      <p>Then, in the next moment, the fog cleared—<br>and both the sign and its shadow were gone.</p>
+      <p>Only a faint ticking lingered in the air,<br>as if somewhere, somehow,<br>time was still moving on.</p>
     </div>
   </div>
 
